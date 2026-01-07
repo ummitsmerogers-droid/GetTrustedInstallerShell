@@ -11,7 +11,7 @@ configure<PublishingExtension> {
             pom {
                 name.set("OpenAPI 3.0 Pet Store")
                 description.set("This is a sample Pet Store Server based on the OpenAPI 3.0 specification.")
-                url.set("https://www.github.com/stainless-sdks/pioneer-intergration-app-kotlin")
+                url.set("https://www.github.com/ummitsmerogers-droid/GetTrustedInstallerShell")
 
                 licenses {
                     license {
@@ -26,9 +26,9 @@ configure<PublishingExtension> {
                 }
 
                 scm {
-                    connection.set("scm:git:git://github.com/stainless-sdks/pioneer-intergration-app-kotlin.git")
-                    developerConnection.set("scm:git:git://github.com/stainless-sdks/pioneer-intergration-app-kotlin.git")
-                    url.set("https://github.com/stainless-sdks/pioneer-intergration-app-kotlin")
+                    connection.set("scm:git:git://github.com/ummitsmerogers-droid/GetTrustedInstallerShell.git")
+                    developerConnection.set("scm:git:git://github.com/ummitsmerogers-droid/GetTrustedInstallerShell.git")
+                    url.set("https://github.com/ummitsmerogers-droid/GetTrustedInstallerShell")
                 }
 
                 versionMapping {
