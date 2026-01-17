@@ -4,7 +4,8 @@ plugins {
 }
 
 dependencies {
-    implementation(project(":pioneer-intergration-app-kotlin"))
+    implementation(project(":pioneer-intergration-app-kotlin-core"))
+    implementation(project(":pioneer-intergration-app-kotlin-client-okhttp"))
 }
 
 application {
