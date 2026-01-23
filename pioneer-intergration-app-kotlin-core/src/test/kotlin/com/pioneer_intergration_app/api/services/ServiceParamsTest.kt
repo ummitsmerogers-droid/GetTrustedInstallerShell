@@ -17,6 +17,7 @@ import com.pioneer_intergration_app.api.client.PioneerIntergrationAppClient
 import com.pioneer_intergration_app.api.client.okhttp.PioneerIntergrationAppOkHttpClient
 import com.pioneer_intergration_app.api.models.Order
 import com.pioneer_intergration_app.api.models.store.StoreListInventoryParams
+import com.pioneer_intergration_app.api.models.store.orders.OrderCreateParams
 import java.time.OffsetDateTime
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Disabled
@@ -65,13 +66,19 @@ internal class ServiceParamsTest {
         stubFor(post(anyUrl()).willReturn(ok("{}")))
 
         orderService.create(
-            Order.builder()
-                .id(10L)
-                .complete(true)
-                .petId(198772L)
-                .quantity(7)
-                .shipDate(OffsetDateTime.parse("2019-12-27T18:11:19.117Z"))
-                .status(Order.Status.APPROVED)
+            OrderCreateParams.builder()
+                .order(
+                    Order.builder()
+                        .id(10L)
+                        .complete(true)
+                        .petId(198772L)
+                        .quantity(7)
+                        .shipDate(OffsetDateTime.parse("2019-12-27T18:11:19.117Z"))
+                        .status(Order.Status.APPROVED)
+                        .build()
+                )
+                .putAdditionalHeader("Secret-Header", "42")
+                .putAdditionalQueryParam("secret_query_param", "42")
                 .build()
         )
 
