@@ -331,6 +331,25 @@ val client: PioneerIntergrationAppClient = PioneerIntergrationAppOkHttpClient.bu
     .build()
 ```
 
+### Connection pooling
+
+To customize the underlying OkHttp connection pool, configure the client using the `maxIdleConnections` and `keepAliveDuration` methods:
+
+```kotlin
+import com.pioneer_intergration_app.api.client.PioneerIntergrationAppClient
+import com.pioneer_intergration_app.api.client.okhttp.PioneerIntergrationAppOkHttpClient
+import java.time.Duration
+
+val client: PioneerIntergrationAppClient = PioneerIntergrationAppOkHttpClient.builder()
+    .fromEnv()
+    // If `maxIdleConnections` is set, then `keepAliveDuration` must be set, and vice versa.
+    .maxIdleConnections(10)
+    .keepAliveDuration(Duration.ofMinutes(2))
+    .build()
+```
+
+If both options are unset, OkHttp's default connection pool settings are used.
+
 ### HTTPS
 
 > [!NOTE]
