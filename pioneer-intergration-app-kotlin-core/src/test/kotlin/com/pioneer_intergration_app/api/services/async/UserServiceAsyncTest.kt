@@ -5,7 +5,6 @@ package com.pioneer_intergration_app.api.services.async
 import com.pioneer_intergration_app.api.TestServerExtension
 import com.pioneer_intergration_app.api.client.okhttp.PioneerIntergrationAppOkHttpClientAsync
 import com.pioneer_intergration_app.api.models.users.User
-import com.pioneer_intergration_app.api.models.users.UserCreateWithListParams
 import com.pioneer_intergration_app.api.models.users.UserLoginParams
 import com.pioneer_intergration_app.api.models.users.UserUpdateParams
 import org.junit.jupiter.api.Disabled
@@ -111,20 +110,18 @@ internal class UserServiceAsyncTest {
 
         val user =
             userServiceAsync.createWithList(
-                UserCreateWithListParams.builder()
-                    .addItem(
-                        User.builder()
-                            .id(10L)
-                            .email("john@email.com")
-                            .firstName("John")
-                            .lastName("James")
-                            .password("12345")
-                            .phone("12345")
-                            .username("theUser")
-                            .userStatus(1)
-                            .build()
-                    )
-                    .build()
+                listOf(
+                    User.builder()
+                        .id(10L)
+                        .email("john@email.com")
+                        .firstName("John")
+                        .lastName("James")
+                        .password("12345")
+                        .phone("12345")
+                        .username("theUser")
+                        .userStatus(1)
+                        .build()
+                )
             )
 
         user.validate()
