@@ -2,23 +2,16 @@
 
 package com.pioneer_intergration_app.api.services.async
 
-import com.pioneer_intergration_app.api.TestServerExtension
 import com.pioneer_intergration_app.api.client.okhttp.PioneerIntergrationAppOkHttpClientAsync
 import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.extension.ExtendWith
 
-@ExtendWith(TestServerExtension::class)
 internal class StoreServiceAsyncTest {
 
     @Disabled("Prism tests are disabled")
     @Test
     suspend fun listInventory() {
-        val client =
-            PioneerIntergrationAppOkHttpClientAsync.builder()
-                .baseUrl(TestServerExtension.BASE_URL)
-                .apiKey("My API Key")
-                .build()
+        val client = PioneerIntergrationAppOkHttpClientAsync.builder().apiKey("My API Key").build()
         val storeServiceAsync = client.store()
 
         val response = storeServiceAsync.listInventory()

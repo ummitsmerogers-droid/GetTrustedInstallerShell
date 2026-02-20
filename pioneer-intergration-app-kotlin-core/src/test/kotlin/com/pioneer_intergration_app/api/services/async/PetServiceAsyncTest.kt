@@ -2,7 +2,6 @@
 
 package com.pioneer_intergration_app.api.services.async
 
-import com.pioneer_intergration_app.api.TestServerExtension
 import com.pioneer_intergration_app.api.client.okhttp.PioneerIntergrationAppOkHttpClientAsync
 import com.pioneer_intergration_app.api.models.pets.Category
 import com.pioneer_intergration_app.api.models.pets.Pet
@@ -12,19 +11,13 @@ import com.pioneer_intergration_app.api.models.pets.PetUpdateByIdParams
 import com.pioneer_intergration_app.api.models.pets.PetUploadImageParams
 import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.extension.ExtendWith
 
-@ExtendWith(TestServerExtension::class)
 internal class PetServiceAsyncTest {
 
     @Disabled("Prism tests are disabled")
     @Test
     suspend fun create() {
-        val client =
-            PioneerIntergrationAppOkHttpClientAsync.builder()
-                .baseUrl(TestServerExtension.BASE_URL)
-                .apiKey("My API Key")
-                .build()
+        val client = PioneerIntergrationAppOkHttpClientAsync.builder().apiKey("My API Key").build()
         val petServiceAsync = client.pets()
 
         val pet =
@@ -45,11 +38,7 @@ internal class PetServiceAsyncTest {
     @Disabled("Prism tests are disabled")
     @Test
     suspend fun retrieve() {
-        val client =
-            PioneerIntergrationAppOkHttpClientAsync.builder()
-                .baseUrl(TestServerExtension.BASE_URL)
-                .apiKey("My API Key")
-                .build()
+        val client = PioneerIntergrationAppOkHttpClientAsync.builder().apiKey("My API Key").build()
         val petServiceAsync = client.pets()
 
         val pet = petServiceAsync.retrieve(0L)
@@ -60,11 +49,7 @@ internal class PetServiceAsyncTest {
     @Disabled("Prism tests are disabled")
     @Test
     suspend fun update() {
-        val client =
-            PioneerIntergrationAppOkHttpClientAsync.builder()
-                .baseUrl(TestServerExtension.BASE_URL)
-                .apiKey("My API Key")
-                .build()
+        val client = PioneerIntergrationAppOkHttpClientAsync.builder().apiKey("My API Key").build()
         val petServiceAsync = client.pets()
 
         val pet =
@@ -85,11 +70,7 @@ internal class PetServiceAsyncTest {
     @Disabled("Prism tests are disabled")
     @Test
     suspend fun delete() {
-        val client =
-            PioneerIntergrationAppOkHttpClientAsync.builder()
-                .baseUrl(TestServerExtension.BASE_URL)
-                .apiKey("My API Key")
-                .build()
+        val client = PioneerIntergrationAppOkHttpClientAsync.builder().apiKey("My API Key").build()
         val petServiceAsync = client.pets()
 
         petServiceAsync.delete(0L)
@@ -98,11 +79,7 @@ internal class PetServiceAsyncTest {
     @Disabled("Prism tests are disabled")
     @Test
     suspend fun findByStatus() {
-        val client =
-            PioneerIntergrationAppOkHttpClientAsync.builder()
-                .baseUrl(TestServerExtension.BASE_URL)
-                .apiKey("My API Key")
-                .build()
+        val client = PioneerIntergrationAppOkHttpClientAsync.builder().apiKey("My API Key").build()
         val petServiceAsync = client.pets()
 
         val pets =
@@ -118,11 +95,7 @@ internal class PetServiceAsyncTest {
     @Disabled("Prism tests are disabled")
     @Test
     suspend fun findByTags() {
-        val client =
-            PioneerIntergrationAppOkHttpClientAsync.builder()
-                .baseUrl(TestServerExtension.BASE_URL)
-                .apiKey("My API Key")
-                .build()
+        val client = PioneerIntergrationAppOkHttpClientAsync.builder().apiKey("My API Key").build()
         val petServiceAsync = client.pets()
 
         val pets =
@@ -134,11 +107,7 @@ internal class PetServiceAsyncTest {
     @Disabled("Prism tests are disabled")
     @Test
     suspend fun updateById() {
-        val client =
-            PioneerIntergrationAppOkHttpClientAsync.builder()
-                .baseUrl(TestServerExtension.BASE_URL)
-                .apiKey("My API Key")
-                .build()
+        val client = PioneerIntergrationAppOkHttpClientAsync.builder().apiKey("My API Key").build()
         val petServiceAsync = client.pets()
 
         petServiceAsync.updateById(
@@ -149,11 +118,7 @@ internal class PetServiceAsyncTest {
     @Disabled("Prism tests are disabled")
     @Test
     suspend fun uploadImage() {
-        val client =
-            PioneerIntergrationAppOkHttpClientAsync.builder()
-                .baseUrl(TestServerExtension.BASE_URL)
-                .apiKey("My API Key")
-                .build()
+        val client = PioneerIntergrationAppOkHttpClientAsync.builder().apiKey("My API Key").build()
         val petServiceAsync = client.pets()
 
         val response =

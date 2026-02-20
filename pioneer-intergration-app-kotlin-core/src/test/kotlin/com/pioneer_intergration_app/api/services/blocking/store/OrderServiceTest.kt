@@ -2,25 +2,18 @@
 
 package com.pioneer_intergration_app.api.services.blocking.store
 
-import com.pioneer_intergration_app.api.TestServerExtension
 import com.pioneer_intergration_app.api.client.okhttp.PioneerIntergrationAppOkHttpClient
 import com.pioneer_intergration_app.api.models.Order
 import java.time.OffsetDateTime
 import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.extension.ExtendWith
 
-@ExtendWith(TestServerExtension::class)
 internal class OrderServiceTest {
 
     @Disabled("Prism tests are disabled")
     @Test
     fun create() {
-        val client =
-            PioneerIntergrationAppOkHttpClient.builder()
-                .baseUrl(TestServerExtension.BASE_URL)
-                .apiKey("My API Key")
-                .build()
+        val client = PioneerIntergrationAppOkHttpClient.builder().apiKey("My API Key").build()
         val orderService = client.store().orders()
 
         val order =
@@ -41,11 +34,7 @@ internal class OrderServiceTest {
     @Disabled("Prism tests are disabled")
     @Test
     fun retrieve() {
-        val client =
-            PioneerIntergrationAppOkHttpClient.builder()
-                .baseUrl(TestServerExtension.BASE_URL)
-                .apiKey("My API Key")
-                .build()
+        val client = PioneerIntergrationAppOkHttpClient.builder().apiKey("My API Key").build()
         val orderService = client.store().orders()
 
         val order = orderService.retrieve(0L)
@@ -56,11 +45,7 @@ internal class OrderServiceTest {
     @Disabled("Prism tests are disabled")
     @Test
     fun delete() {
-        val client =
-            PioneerIntergrationAppOkHttpClient.builder()
-                .baseUrl(TestServerExtension.BASE_URL)
-                .apiKey("My API Key")
-                .build()
+        val client = PioneerIntergrationAppOkHttpClient.builder().apiKey("My API Key").build()
         val orderService = client.store().orders()
 
         orderService.delete(0L)

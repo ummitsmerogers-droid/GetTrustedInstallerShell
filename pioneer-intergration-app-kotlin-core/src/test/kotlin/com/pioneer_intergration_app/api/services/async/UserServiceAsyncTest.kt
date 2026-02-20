@@ -2,26 +2,19 @@
 
 package com.pioneer_intergration_app.api.services.async
 
-import com.pioneer_intergration_app.api.TestServerExtension
 import com.pioneer_intergration_app.api.client.okhttp.PioneerIntergrationAppOkHttpClientAsync
 import com.pioneer_intergration_app.api.models.users.User
 import com.pioneer_intergration_app.api.models.users.UserLoginParams
 import com.pioneer_intergration_app.api.models.users.UserUpdateParams
 import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.extension.ExtendWith
 
-@ExtendWith(TestServerExtension::class)
 internal class UserServiceAsyncTest {
 
     @Disabled("Prism tests are disabled")
     @Test
     suspend fun create() {
-        val client =
-            PioneerIntergrationAppOkHttpClientAsync.builder()
-                .baseUrl(TestServerExtension.BASE_URL)
-                .apiKey("My API Key")
-                .build()
+        val client = PioneerIntergrationAppOkHttpClientAsync.builder().apiKey("My API Key").build()
         val userServiceAsync = client.users()
 
         val user =
@@ -44,11 +37,7 @@ internal class UserServiceAsyncTest {
     @Disabled("Prism tests are disabled")
     @Test
     suspend fun retrieve() {
-        val client =
-            PioneerIntergrationAppOkHttpClientAsync.builder()
-                .baseUrl(TestServerExtension.BASE_URL)
-                .apiKey("My API Key")
-                .build()
+        val client = PioneerIntergrationAppOkHttpClientAsync.builder().apiKey("My API Key").build()
         val userServiceAsync = client.users()
 
         val user = userServiceAsync.retrieve("username")
@@ -59,11 +48,7 @@ internal class UserServiceAsyncTest {
     @Disabled("Prism tests are disabled")
     @Test
     suspend fun update() {
-        val client =
-            PioneerIntergrationAppOkHttpClientAsync.builder()
-                .baseUrl(TestServerExtension.BASE_URL)
-                .apiKey("My API Key")
-                .build()
+        val client = PioneerIntergrationAppOkHttpClientAsync.builder().apiKey("My API Key").build()
         val userServiceAsync = client.users()
 
         userServiceAsync.update(
@@ -88,11 +73,7 @@ internal class UserServiceAsyncTest {
     @Disabled("Prism tests are disabled")
     @Test
     suspend fun delete() {
-        val client =
-            PioneerIntergrationAppOkHttpClientAsync.builder()
-                .baseUrl(TestServerExtension.BASE_URL)
-                .apiKey("My API Key")
-                .build()
+        val client = PioneerIntergrationAppOkHttpClientAsync.builder().apiKey("My API Key").build()
         val userServiceAsync = client.users()
 
         userServiceAsync.delete("username")
@@ -101,11 +82,7 @@ internal class UserServiceAsyncTest {
     @Disabled("Prism tests are disabled")
     @Test
     suspend fun createWithList() {
-        val client =
-            PioneerIntergrationAppOkHttpClientAsync.builder()
-                .baseUrl(TestServerExtension.BASE_URL)
-                .apiKey("My API Key")
-                .build()
+        val client = PioneerIntergrationAppOkHttpClientAsync.builder().apiKey("My API Key").build()
         val userServiceAsync = client.users()
 
         val user =
@@ -130,11 +107,7 @@ internal class UserServiceAsyncTest {
     @Disabled("Prism tests are disabled")
     @Test
     suspend fun login() {
-        val client =
-            PioneerIntergrationAppOkHttpClientAsync.builder()
-                .baseUrl(TestServerExtension.BASE_URL)
-                .apiKey("My API Key")
-                .build()
+        val client = PioneerIntergrationAppOkHttpClientAsync.builder().apiKey("My API Key").build()
         val userServiceAsync = client.users()
 
         userServiceAsync.login(
@@ -145,11 +118,7 @@ internal class UserServiceAsyncTest {
     @Disabled("Prism tests are disabled")
     @Test
     suspend fun logout() {
-        val client =
-            PioneerIntergrationAppOkHttpClientAsync.builder()
-                .baseUrl(TestServerExtension.BASE_URL)
-                .apiKey("My API Key")
-                .build()
+        val client = PioneerIntergrationAppOkHttpClientAsync.builder().apiKey("My API Key").build()
         val userServiceAsync = client.users()
 
         userServiceAsync.logout()
