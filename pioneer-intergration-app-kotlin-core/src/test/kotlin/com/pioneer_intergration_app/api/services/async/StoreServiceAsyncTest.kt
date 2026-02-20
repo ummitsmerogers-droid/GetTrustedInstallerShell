@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test
 
 internal class StoreServiceAsyncTest {
 
-    @Disabled("Prism tests are disabled")
+    @Disabled("Mock server tests are disabled")
     @Test
     suspend fun listInventory() {
         val client = PioneerIntergrationAppOkHttpClientAsync.builder().apiKey("My API Key").build()

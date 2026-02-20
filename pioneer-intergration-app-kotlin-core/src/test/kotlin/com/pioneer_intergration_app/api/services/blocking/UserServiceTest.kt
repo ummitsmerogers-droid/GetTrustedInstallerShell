@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test
 
 internal class UserServiceTest {
 
-    @Disabled("Prism tests are disabled")
+    @Disabled("Mock server tests are disabled")
     @Test
     fun create() {
         val client = PioneerIntergrationAppOkHttpClient.builder().apiKey("My API Key").build()
@@ -34,7 +34,7 @@ internal class UserServiceTest {
         user.validate()
     }
 
-    @Disabled("Prism tests are disabled")
+    @Disabled("Mock server tests are disabled")
     @Test
     fun retrieve() {
         val client = PioneerIntergrationAppOkHttpClient.builder().apiKey("My API Key").build()
@@ -45,7 +45,7 @@ internal class UserServiceTest {
         user.validate()
     }
 
-    @Disabled("Prism tests are disabled")
+    @Disabled("Mock server tests are disabled")
     @Test
     fun update() {
         val client = PioneerIntergrationAppOkHttpClient.builder().apiKey("My API Key").build()
@@ -70,7 +70,7 @@ internal class UserServiceTest {
         )
     }
 
-    @Disabled("Prism tests are disabled")
+    @Disabled("Mock server tests are disabled")
     @Test
     fun delete() {
         val client = PioneerIntergrationAppOkHttpClient.builder().apiKey("My API Key").build()
@@ -79,7 +79,7 @@ internal class UserServiceTest {
         userService.delete("username")
     }
 
-    @Disabled("Prism tests are disabled")
+    @Disabled("Mock server tests are disabled")
     @Test
     fun createWithList() {
         val client = PioneerIntergrationAppOkHttpClient.builder().apiKey("My API Key").build()
@@ -104,7 +104,7 @@ internal class UserServiceTest {
         user.validate()
     }
 
-    @Disabled("Prism tests are disabled")
+    @Disabled("Mock server tests are disabled")
     @Test
     fun login() {
         val client = PioneerIntergrationAppOkHttpClient.builder().apiKey("My API Key").build()
@@ -115,7 +115,7 @@ internal class UserServiceTest {
         )
     }
 
-    @Disabled("Prism tests are disabled")
+    @Disabled("Mock server tests are disabled")
     @Test
     fun logout() {
         val client = PioneerIntergrationAppOkHttpClient.builder().apiKey("My API Key").build()

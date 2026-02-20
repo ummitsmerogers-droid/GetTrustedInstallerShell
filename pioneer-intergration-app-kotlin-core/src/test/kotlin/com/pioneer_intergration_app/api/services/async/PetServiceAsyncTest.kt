@@ -14,7 +14,7 @@ import org.junit.jupiter.api.Test
 
 internal class PetServiceAsyncTest {
 
-    @Disabled("Prism tests are disabled")
+    @Disabled("Mock server tests are disabled")
     @Test
     suspend fun create() {
         val client = PioneerIntergrationAppOkHttpClientAsync.builder().apiKey("My API Key").build()
@@ -35,7 +35,7 @@ internal class PetServiceAsyncTest {
         pet.validate()
     }
 
-    @Disabled("Prism tests are disabled")
+    @Disabled("Mock server tests are disabled")
     @Test
     suspend fun retrieve() {
         val client = PioneerIntergrationAppOkHttpClientAsync.builder().apiKey("My API Key").build()
@@ -46,7 +46,7 @@ internal class PetServiceAsyncTest {
         pet.validate()
     }
 
-    @Disabled("Prism tests are disabled")
+    @Disabled("Mock server tests are disabled")
     @Test
     suspend fun update() {
         val client = PioneerIntergrationAppOkHttpClientAsync.builder().apiKey("My API Key").build()
@@ -67,7 +67,7 @@ internal class PetServiceAsyncTest {
         pet.validate()
     }
 
-    @Disabled("Prism tests are disabled")
+    @Disabled("Mock server tests are disabled")
     @Test
     suspend fun delete() {
         val client = PioneerIntergrationAppOkHttpClientAsync.builder().apiKey("My API Key").build()
@@ -76,7 +76,7 @@ internal class PetServiceAsyncTest {
         petServiceAsync.delete(0L)
     }
 
-    @Disabled("Prism tests are disabled")
+    @Disabled("Mock server tests are disabled")
     @Test
     suspend fun findByStatus() {
         val client = PioneerIntergrationAppOkHttpClientAsync.builder().apiKey("My API Key").build()
@@ -92,7 +92,7 @@ internal class PetServiceAsyncTest {
         pets.forEach { it.validate() }
     }
 
-    @Disabled("Prism tests are disabled")
+    @Disabled("Mock server tests are disabled")
     @Test
     suspend fun findByTags() {
         val client = PioneerIntergrationAppOkHttpClientAsync.builder().apiKey("My API Key").build()
@@ -104,7 +104,7 @@ internal class PetServiceAsyncTest {
         pets.forEach { it.validate() }
     }
 
-    @Disabled("Prism tests are disabled")
+    @Disabled("Mock server tests are disabled")
     @Test
     suspend fun updateById() {
         val client = PioneerIntergrationAppOkHttpClientAsync.builder().apiKey("My API Key").build()
@@ -115,7 +115,7 @@ internal class PetServiceAsyncTest {
         )
     }
 
-    @Disabled("Prism tests are disabled")
+    @Disabled("Mock server tests are disabled")
     @Test
     suspend fun uploadImage() {
         val client = PioneerIntergrationAppOkHttpClientAsync.builder().apiKey("My API Key").build()

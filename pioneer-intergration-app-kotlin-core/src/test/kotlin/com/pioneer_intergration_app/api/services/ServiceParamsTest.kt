@@ -39,7 +39,7 @@ internal class ServiceParamsTest {
                 .build()
     }
 
-    @Disabled("Prism tests are disabled")
+    @Disabled("Mock server tests are disabled")
     @Test
     fun listInventory() {
         val storeService = client.store()
@@ -59,7 +59,7 @@ internal class ServiceParamsTest {
         )
     }
 
-    @Disabled("Prism tests are disabled")
+    @Disabled("Mock server tests are disabled")
     @Test
     fun create() {
         val orderService = client.store().orders()
