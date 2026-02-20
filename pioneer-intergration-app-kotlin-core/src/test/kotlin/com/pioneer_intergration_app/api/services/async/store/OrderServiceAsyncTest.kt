@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test
 
 internal class OrderServiceAsyncTest {
 
-    @Disabled("Prism tests are disabled")
+    @Disabled("Mock server tests are disabled")
     @Test
     suspend fun create() {
         val client = PioneerIntergrationAppOkHttpClientAsync.builder().apiKey("My API Key").build()
@@ -31,7 +31,7 @@ internal class OrderServiceAsyncTest {
         order.validate()
     }
 
-    @Disabled("Prism tests are disabled")
+    @Disabled("Mock server tests are disabled")
     @Test
     suspend fun retrieve() {
         val client = PioneerIntergrationAppOkHttpClientAsync.builder().apiKey("My API Key").build()
@@ -42,7 +42,7 @@ internal class OrderServiceAsyncTest {
         order.validate()
     }
 
-    @Disabled("Prism tests are disabled")
+    @Disabled("Mock server tests are disabled")
     @Test
     suspend fun delete() {
         val client = PioneerIntergrationAppOkHttpClientAsync.builder().apiKey("My API Key").build()
