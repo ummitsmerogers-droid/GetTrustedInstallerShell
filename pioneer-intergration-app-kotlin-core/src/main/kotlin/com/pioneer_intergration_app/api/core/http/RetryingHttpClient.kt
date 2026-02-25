@@ -1,3 +1,5 @@
+// File generated from our OpenAPI spec by Stainless.
+
 package com.pioneer_intergration_app.api.core.http
 
 import com.pioneer_intergration_app.api.core.DefaultSleeper
