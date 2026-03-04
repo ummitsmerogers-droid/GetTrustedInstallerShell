@@ -46,10 +46,13 @@ class PioneerIntergrationAppClientImpl(private val clientOptions: ClientOptions)
     ): PioneerIntergrationAppClient =
         PioneerIntergrationAppClientImpl(clientOptions.toBuilder().apply(modifier).build())
 
+    /** Everything about your Pets */
     override fun pets(): PetService = pets
 
+    /** Access to Petstore orders */
     override fun store(): StoreService = store
 
+    /** Operations about user */
     override fun users(): UserService = users
 
     override fun close() = clientOptions.close()
@@ -76,10 +79,13 @@ class PioneerIntergrationAppClientImpl(private val clientOptions: ClientOptions)
                 clientOptions.toBuilder().apply(modifier).build()
             )
 
+        /** Everything about your Pets */
         override fun pets(): PetService.WithRawResponse = pets
 
+        /** Access to Petstore orders */
         override fun store(): StoreService.WithRawResponse = store
 
+        /** Operations about user */
         override fun users(): UserService.WithRawResponse = users
     }
 }

@@ -18,6 +18,7 @@ import com.pioneer_intergration_app.api.models.pets.PetUpdateParams
 import com.pioneer_intergration_app.api.models.pets.PetUploadImageParams
 import com.pioneer_intergration_app.api.models.pets.PetUploadImageResponse
 
+/** Everything about your Pets */
 interface PetService {
 
     /**

@@ -22,6 +22,7 @@ import com.pioneer_intergration_app.api.models.store.orders.OrderCreateParams
 import com.pioneer_intergration_app.api.models.store.orders.OrderDeleteParams
 import com.pioneer_intergration_app.api.models.store.orders.OrderRetrieveParams
 
+/** Access to Petstore orders */
 class OrderServiceAsyncImpl internal constructor(private val clientOptions: ClientOptions) :
     OrderServiceAsync {
 
