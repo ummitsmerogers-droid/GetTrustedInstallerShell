@@ -10,6 +10,7 @@ import com.pioneer_intergration_app.api.models.store.StoreListInventoryParams
 import com.pioneer_intergration_app.api.models.store.StoreListInventoryResponse
 import com.pioneer_intergration_app.api.services.blocking.store.OrderService
 
+/** Access to Petstore orders */
 interface StoreService {
 
     /**
@@ -24,6 +25,7 @@ interface StoreService {
      */
     fun withOptions(modifier: (ClientOptions.Builder) -> Unit): StoreService
 
+    /** Access to Petstore orders */
     fun orders(): OrderService
 
     /** Returns a map of status codes to quantities */
@@ -46,6 +48,7 @@ interface StoreService {
          */
         fun withOptions(modifier: (ClientOptions.Builder) -> Unit): StoreService.WithRawResponse
 
+        /** Access to Petstore orders */
         fun orders(): OrderService.WithRawResponse
 
         /**

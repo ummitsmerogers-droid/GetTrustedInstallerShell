@@ -43,10 +43,13 @@ interface PioneerIntergrationAppClientAsync {
      */
     fun withOptions(modifier: (ClientOptions.Builder) -> Unit): PioneerIntergrationAppClientAsync
 
+    /** Everything about your Pets */
     fun pets(): PetServiceAsync
 
+    /** Access to Petstore orders */
     fun store(): StoreServiceAsync
 
+    /** Operations about user */
     fun users(): UserServiceAsync
 
     /**
@@ -77,10 +80,13 @@ interface PioneerIntergrationAppClientAsync {
             modifier: (ClientOptions.Builder) -> Unit
         ): PioneerIntergrationAppClientAsync.WithRawResponse
 
+        /** Everything about your Pets */
         fun pets(): PetServiceAsync.WithRawResponse
 
+        /** Access to Petstore orders */
         fun store(): StoreServiceAsync.WithRawResponse
 
+        /** Operations about user */
         fun users(): UserServiceAsync.WithRawResponse
     }
 }

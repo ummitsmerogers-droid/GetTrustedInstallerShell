@@ -27,6 +27,7 @@ import com.pioneer_intergration_app.api.models.users.UserLogoutParams
 import com.pioneer_intergration_app.api.models.users.UserRetrieveParams
 import com.pioneer_intergration_app.api.models.users.UserUpdateParams
 
+/** Operations about user */
 class UserServiceAsyncImpl internal constructor(private val clientOptions: ClientOptions) :
     UserServiceAsync {
 

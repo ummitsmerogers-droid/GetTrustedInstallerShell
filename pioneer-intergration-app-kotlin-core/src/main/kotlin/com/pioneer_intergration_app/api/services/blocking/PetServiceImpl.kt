@@ -28,6 +28,7 @@ import com.pioneer_intergration_app.api.models.pets.PetUpdateParams
 import com.pioneer_intergration_app.api.models.pets.PetUploadImageParams
 import com.pioneer_intergration_app.api.models.pets.PetUploadImageResponse
 
+/** Everything about your Pets */
 class PetServiceImpl internal constructor(private val clientOptions: ClientOptions) : PetService {
 
     private val withRawResponse: PetService.WithRawResponse by lazy {

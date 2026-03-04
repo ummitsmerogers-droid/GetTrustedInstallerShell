@@ -19,6 +19,7 @@ import com.pioneer_intergration_app.api.models.store.StoreListInventoryResponse
 import com.pioneer_intergration_app.api.services.async.store.OrderServiceAsync
 import com.pioneer_intergration_app.api.services.async.store.OrderServiceAsyncImpl
 
+/** Access to Petstore orders */
 class StoreServiceAsyncImpl internal constructor(private val clientOptions: ClientOptions) :
     StoreServiceAsync {
 
@@ -33,6 +34,7 @@ class StoreServiceAsyncImpl internal constructor(private val clientOptions: Clie
     override fun withOptions(modifier: (ClientOptions.Builder) -> Unit): StoreServiceAsync =
         StoreServiceAsyncImpl(clientOptions.toBuilder().apply(modifier).build())
 
+    /** Access to Petstore orders */
     override fun orders(): OrderServiceAsync = orders
 
     override suspend fun listInventory(
@@ -59,6 +61,7 @@ class StoreServiceAsyncImpl internal constructor(private val clientOptions: Clie
                 clientOptions.toBuilder().apply(modifier).build()
             )
 
+        /** Access to Petstore orders */
         override fun orders(): OrderServiceAsync.WithRawResponse = orders
 
         private val listInventoryHandler: Handler<StoreListInventoryResponse> =
