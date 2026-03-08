@@ -13,13 +13,13 @@ internal class PetUploadImageParamsTest {
         PetUploadImageParams.builder()
             .petId(0L)
             .additionalMetadata("additionalMetadata")
-            .image("some content")
+            .image("Example data")
             .build()
     }
 
     @Test
     fun pathParams() {
-        val params = PetUploadImageParams.builder().petId(0L).image("some content").build()
+        val params = PetUploadImageParams.builder().petId(0L).image("Example data").build()
 
         assertThat(params._pathParam(0)).isEqualTo("0")
         // out-of-bound path param
@@ -32,7 +32,7 @@ internal class PetUploadImageParamsTest {
             PetUploadImageParams.builder()
                 .petId(0L)
                 .additionalMetadata("additionalMetadata")
-                .image("some content")
+                .image("Example data")
                 .build()
 
         val queryParams = params._queryParams()
@@ -45,7 +45,7 @@ internal class PetUploadImageParamsTest {
 
     @Test
     fun queryParamsWithoutOptionalFields() {
-        val params = PetUploadImageParams.builder().petId(0L).image("some content").build()
+        val params = PetUploadImageParams.builder().petId(0L).image("Example data").build()
 
         val queryParams = params._queryParams()
 
@@ -58,20 +58,20 @@ internal class PetUploadImageParamsTest {
             PetUploadImageParams.builder()
                 .petId(0L)
                 .additionalMetadata("additionalMetadata")
-                .image("some content")
+                .image("Example data")
                 .build()
 
         val body = params._body()
 
-        assertThat(body).isEqualTo("some content")
+        assertThat(body).isEqualTo("Example data")
     }
 
     @Test
     fun bodyWithoutOptionalFields() {
-        val params = PetUploadImageParams.builder().petId(0L).image("some content").build()
+        val params = PetUploadImageParams.builder().petId(0L).image("Example data").build()
 
         val body = params._body()
 
-        assertThat(body).isEqualTo("some content")
+        assertThat(body).isEqualTo("Example data")
     }
 }
